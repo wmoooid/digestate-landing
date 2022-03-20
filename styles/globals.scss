@@ -1,0 +1,25 @@
+:root {
+  --accent: #4080ff;
+  --bg: #fbfafb;
+  --main: #132026;
+  --body: #26404d;
+  --grey-50: #607580;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Nunito Sans', sans-serif;
+  letter-spacing: -0.02em;
+  background-color: var(--background);
+}
+
+* {
+  box-sizing: border-box;
+  color: var(--main);
+}
+
+ul {
+  list-style: none;
+}
