@@ -141,7 +141,7 @@ export const SectionHero = () => {
             </div>
           </div>
           <div className='phone'>
-            <Image src={phone} alt='' />
+            <Image src={phone} alt='' priority />
             <div className='popup'>
               <div className='heading'>Living Waters House</div>
               <div className='text'>
