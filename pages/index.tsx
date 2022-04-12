@@ -1,17 +1,34 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Image from 'next/image';
+import { Header } from '../components/Header';
+import { SectionHero } from '../components/SectionHero';
+import { RegularSections } from '../components/RegularSections';
+import { SectionCases } from '../components/SectionCases/SectionCases';
+import { SectionOffer } from '../components/SectionOffer';
+import { Footer } from '../components/Footer';
 import 'macro-css';
 
 const Home: NextPage = () => {
   return (
-    <Head>
-      <meta name='viewport' content='width=device-width, user-scalable=no' />
-      <link rel='preconnect' href='https://fonts.googleapis.com' />
-      <link rel='preconnect' href='https://fonts.gstatic.com' />
-      <link href='https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap' rel='stylesheet' />
-      <title>digestate</title>
-    </Head>
+    <>
+      <Head>
+        <meta httpEquiv='Content-Type' content='text/html; charset=UTF-8' />
+        <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+        <link
+          href='https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap'
+          rel='stylesheet'
+        />
+        <title>digēstate – Digital real estate registration service</title>
+      </Head>
+      <Header />
+      <main>
+        <SectionHero />
+        <RegularSections />
+        <SectionCases />
+        <SectionOffer />
+        <Footer />
+      </main>
+    </>
   );
 };
 

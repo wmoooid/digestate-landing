@@ -1,9 +1,10 @@
 :root {
   --accent: #4080ff;
-  --bg: #fbfafb;
+  --accent-dark: #0055ff;
+  --bg: #fafafa;
   --main: #132026;
-  --body: #26404d;
-  --grey-50: #607580;
+  --body: #39464d;
+  --grey-50: #6c7980;
 }
 
 html,
@@ -12,7 +13,7 @@ body {
   margin: 0;
   font-family: 'Nunito Sans', sans-serif;
   letter-spacing: -0.02em;
-  background-color: var(--background);
+  background-color: var(--bg);
 }
 
 * {
@@ -20,6 +21,25 @@ body {
   color: var(--main);
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 ul {
+  margin: 0;
+  padding: 0;
   list-style: none;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type='number'],
+input[type='number']:hover,
+input[type='number']:focus {
+  appearance: none;
+  -moz-appearance: textfield;
 }
