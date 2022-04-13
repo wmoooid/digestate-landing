@@ -7,7 +7,7 @@ export const SectionHero = () => {
       <div className='container'>
         <div className='hero-content'>
           <div className='left-side'>
-            <h1 className='h1'>
+            <h1 className='h1 hero-heading'>
               Digital real estate <br /> registration service
             </h1>
             <p className='description'>for banks, developers and real estate agencies.</p>
@@ -141,7 +141,7 @@ export const SectionHero = () => {
             </div>
           </div>
           <div className='phone'>
-            <Image src={phone} alt='' priority />
+            <Image src={phone} alt='' priority={true} />
             <div className='popup'>
               <div className='heading'>Living Waters House</div>
               <div className='text'>

@@ -185,19 +185,25 @@
 
     background: linear-gradient(45deg, #9797d8 5%, #b6caf2 30%, #c2e6f2 70%, #d4cef2 95%);
     background-size: 300%;
-    animation: section-hero 20s ease infinite;
+    animation: section-hero 10s ease infinite;
     border-radius: 10px;
   }
 
   .hero-content {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
 
     .left-side {
       margin: 48px 0;
+      align-self: center;
+
+      .hero-heading {
+        max-width: 600px;
+      }
 
       .description {
+        max-width: 600px;
         margin-top: 24px;
         font-size: 24px;
         line-height: 1;
@@ -212,6 +218,7 @@
         .item {
           display: flex;
           align-items: center;
+          max-width: 200px;
 
           .icon {
             margin-right: 8px;
@@ -324,6 +331,7 @@
 
       .customer-name-small {
         width: max-content;
+        max-width: 150px;
         margin-left: 16px;
         font-size: 21px;
         line-height: 1;
@@ -576,6 +584,7 @@
     }
 
     .offer-value {
+      max-width: 450px;
       font-size: 48px;
       line-height: 100%;
       font-weight: 800;
@@ -769,7 +778,7 @@
 
   .customer-cases {
     .case-content {
-      min-height: 570px;
+      min-height: 435px;
     }
   }
 
@@ -952,11 +961,12 @@
   }
   .section-hero {
     &::before {
-      left: 0;
-      right: 0;
+      left: 8;
+      right: 8;
     }
 
     .hero-content {
+      padding: 0 16px;
       .left-side {
         .description {
           font-size: 18px;

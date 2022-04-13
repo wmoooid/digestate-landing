@@ -30,13 +30,13 @@ export const ThirdCase = () => {
         <div className='horizontal-divider'></div>
         <li className='metrics-item'>
           <small className='metrics-name'>Registred deals</small>
-          <strong className='metrics-data'>6 540</strong>
+          <strong className='metrics-data'>2 350</strong>
         </li>
         <div className='horizontal-divider'></div>
         <li className='metrics-item'>
           <small className='metrics-name'>Faster sales cycle</small>
           <strong className='metrics-data'>
-            <span className='metrics-data-caption'>by </span>60%
+            <span className='metrics-data-caption'>by </span>40%
           </strong>
         </li>
       </ul>

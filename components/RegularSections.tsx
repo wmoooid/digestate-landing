@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import integration from '../public/img/integration.png';
 
-export const RegularSections = () => {
+export default function RegularSections() {
   return (
     <>
       <section className='section'>
@@ -127,4 +127,4 @@ export const RegularSections = () => {
       </section>
     </>
   );
-};
+}

@@ -2,11 +2,14 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import { Header } from '../components/Header';
 import { SectionHero } from '../components/SectionHero';
-import { RegularSections } from '../components/RegularSections';
 import { SectionCases } from '../components/SectionCases/SectionCases';
 import { SectionOffer } from '../components/SectionOffer';
 import { Footer } from '../components/Footer';
 import 'macro-css';
+import { lazy, Suspense } from 'react';
+// import { RegularSections } from '../components/RegularSections';
+
+const RegularSections = lazy(() => import('../components/RegularSections'));
 
 const Home: NextPage = () => {
   return (
@@ -23,7 +26,9 @@ const Home: NextPage = () => {
       <Header />
       <main>
         <SectionHero />
-        <RegularSections />
+        <Suspense fallback={<div></div>}>
+          <RegularSections />
+        </Suspense>
         <SectionCases />
         <SectionOffer />
         <Footer />

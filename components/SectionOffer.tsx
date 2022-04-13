@@ -17,8 +17,8 @@ export const SectionOffer = () => {
     setApiIntegration(event.target.checked);
   }
 
-  let offerValue = (employNumber / 11 + 1000 / 11) * serviceLife + (apiIntegration ? 100 : 0);
-  let offerValueRound = Math.round(offerValue / 50) * 50;
+  let offerValue = ((employNumber / 11 + 1000 / 11) * ((2 * serviceLife) / 3 + 1) + (apiIntegration ? 50 : 0)) / serviceLife;
+  let offerValueRound = Math.round(offerValue / 5) * 5;
 
   return (
     <section className='section'>
@@ -66,15 +66,15 @@ export const SectionOffer = () => {
                   <span className='radio-text'>3 month</span>
                 </label>
                 <label className='radio-label'>
-                  <input className='input-radio' type='radio' name='service-life' value={5} onClick={handleRadio} />
+                  <input className='input-radio' type='radio' name='service-life' value={6} onClick={handleRadio} />
                   <span className='radio-text'>6 month</span>
                 </label>
                 <label className='radio-label'>
-                  <input className='input-radio' type='radio' name='service-life' value={7} onClick={handleRadio} />
+                  <input className='input-radio' type='radio' name='service-life' value={9} onClick={handleRadio} />
                   <span className='radio-text'>9 month</span>
                 </label>
                 <label className='radio-label'>
-                  <input className='input-radio' type='radio' name='service-life' value={9} onClick={handleRadio} />
+                  <input className='input-radio' type='radio' name='service-life' value={12} onClick={handleRadio} />
                   <span className='radio-text'>1 year</span>
                 </label>
               </div>
@@ -91,9 +91,7 @@ export const SectionOffer = () => {
               <strong className='offer-value'>${offerValueRound.toLocaleString('en-US')}</strong>
               <small className='offer-caption'>per month</small>
             </div>
-            <p className='body offer-text'>
-              If you would like a service plan for more than a year, <br /> please contact us.
-            </p>
+            <p className='body offer-text'>If you would like a service plan for more than a year, please contact us.</p>
             <button className='button accent'>Get offer</button>
           </div>
         </div>

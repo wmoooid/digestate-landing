@@ -28,16 +28,18 @@ export const SecondCase = () => {
         </li>
         <div className='horizontal-divider'></div>
         <li className='metrics-item'>
-          <small className='metrics-name'>Registred deals</small>
-          <strong className='metrics-data'>6 540</strong>
+          <small className='metrics-name'>Economy</small>
+          <strong className='metrics-data'>
+            40<span style={{ fontSize: 24 }}>%</span>
+            <span className='metrics-data-caption'> / year</span>
+          </strong>
         </li>
         <div className='horizontal-divider'></div>
         <li className='metrics-item'>
-          <small className='metrics-name'>Faster sales cycle</small>
-          <strong className='metrics-data'>
-            <span className='metrics-data-caption'>by </span>60%
-          </strong>
+          <small className='metrics-name'>Faster than MFC</small>
+          <strong className='metrics-data'>2x</strong>
         </li>
+        <div className='horizontal-divider'></div>
       </ul>
     </div>
   );
