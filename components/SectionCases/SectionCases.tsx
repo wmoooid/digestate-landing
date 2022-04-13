@@ -6,11 +6,20 @@ import { ThirdCase } from './ThirdCase';
 const CASES = [FirstCase, SecondCase, ThirdCase];
 
 export const SectionCases = () => {
+  const [currentCaseList, setCurrentCaseList] = React.useState(0);
   const [currentCase, setCurrentCase] = React.useState(0);
   const Case = CASES[currentCase];
 
+  const [isFading, setIsFading] = React.useState(false);
+
   function handleClick(index: number) {
-    setCurrentCase(index);
+    if (index === currentCase) return;
+    setIsFading(true);
+    setCurrentCaseList(index);
+    setTimeout(() => {
+      setCurrentCase(index);
+      setIsFading(false);
+    }, 200);
   }
 
   // function nextCase() {
@@ -37,7 +46,7 @@ export const SectionCases = () => {
               onClick={() => {
                 handleClick(0);
               }}
-              className={currentCase === 0 ? 'cases-item active' : 'cases-item'}>
+              className={currentCaseList === 0 ? 'cases-item active' : 'cases-item'}>
               <img className='customer-icon-small' src='/img/client-1.svg' alt='' />
               <small className='customer-name-small'>Raiffeisen bank</small>
             </li>
@@ -45,7 +54,7 @@ export const SectionCases = () => {
               onClick={() => {
                 handleClick(1);
               }}
-              className={currentCase === 1 ? 'cases-item active' : 'cases-item'}>
+              className={currentCaseList === 1 ? 'cases-item active' : 'cases-item'}>
               <img className='customer-icon-small' src='/img/client-2.svg' alt='' />
               <small className='customer-name-small'>V-Estate</small>
             </li>
@@ -53,12 +62,14 @@ export const SectionCases = () => {
               onClick={() => {
                 handleClick(2);
               }}
-              className={currentCase === 2 ? 'cases-item active' : 'cases-item'}>
+              className={currentCaseList === 2 ? 'cases-item active' : 'cases-item'}>
               <img className='customer-icon-small' src='/img/client-3.svg' alt='' />
               <small className='customer-name-small'>Unique Property</small>
             </li>
           </ul>
-          <Case />
+          <div className={isFading ? 'case-content animation-fade now' : 'case-content animation-fade'}>
+            <Case />
+          </div>
         </div>
       </div>
     </section>
