@@ -136,8 +136,12 @@ export const SectionHero = () => {
               </li>
             </ul>
             <div className='buttons'>
-              <div className='button accent hero'>Sign Up</div>
-              <div className='button transperent'>Get Consultation</div>
+              <div className='button accent hero' tabIndex={4}>
+                Sign Up
+              </div>
+              <div className='button transperent' tabIndex={5}>
+                Get Consultation
+              </div>
             </div>
           </div>
           <div className='phone'>

@@ -22,9 +22,15 @@ export const Header = () => {
           </div>
           <nav className='d-flex align-center'>
             <ul className='d-flex'>
-              <li className='nav-item'>Banks</li>
-              <li className='nav-item'>Developers</li>
-              <li className='nav-item hide'>Contact us</li>
+              <li className='nav-item' tabIndex={1}>
+                Banks
+              </li>
+              <li className='nav-item' tabIndex={2}>
+                Developers
+              </li>
+              <li className='nav-item hide' tabIndex={3}>
+                Contact us
+              </li>
             </ul>
             <div className='button outline ml-40'>Sign Up</div>
           </nav>
